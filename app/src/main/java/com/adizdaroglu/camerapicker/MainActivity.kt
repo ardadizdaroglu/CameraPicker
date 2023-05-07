@@ -16,9 +16,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         activityBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityBinding.root)
-        activityBinding.relativelayoutAvatar.setOnClickListener {
-            val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        activityBinding.apply {
+            relativelayoutAvatar.setOnClickListener {
+                val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+            }
+            submitButton.setOnClickListener {
+                submitForm()
+            }
         }
     }
 
@@ -35,6 +40,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun submitForm() {
+        val editTextList = arrayListOf(
+            activityBinding.firstNameEditText,
+            activityBinding.emailEditText,
+            activityBinding.passwordEditText,
+            activityBinding.websiteEditText,
+        )
+
+        var hasEmptyField = false
+        for (editText in editTextList) {
+            if (editText.text.toString().isEmpty()) {
+                editText.error = "This field is required"
+                hasEmptyField = true
+            }
+        }
+
+        if (hasEmptyField.not() && activityBinding.imageviewAvatar.drawable != null) {
+            // success
+        }
+    }
+
 
     companion object {
         private const val REQUEST_IMAGE_CAPTURE = 1
