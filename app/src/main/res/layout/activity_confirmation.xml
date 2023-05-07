@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/left_right_margin_scrollview_register_page"
+        android:layout_marginRight="@dimen/left_right_margin_scrollview_register_page" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hello_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hello_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/subtitle_confirmation_page" />
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_avatar_confirmation"
+                android:layout_width="@dimen/avatar_width"
+                android:layout_height="@dimen/avatar_height"
+                android:background="@drawable/empty_avatar_background"
+                android:layout_margin="@dimen/margin_big"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/imageview_avatar_confirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/website_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textStyle="bold"
+                android:autoLink="web"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/firstname_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/email_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_right_margin_button_register_page"
+        android:layout_marginRight="@dimen/left_right_margin_button_register_page"
+        android:layout_marginBottom="@dimen/bottom_margin_button_register_page"
+        android:text="@string/sign_in_button_register_page"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:padding="@dimen/padding_edittext_register_page"
+        android:textAllCaps="false" />
+
+</LinearLayout>

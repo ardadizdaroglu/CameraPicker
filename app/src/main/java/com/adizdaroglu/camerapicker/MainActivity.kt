@@ -3,11 +3,18 @@ package com.adizdaroglu.camerapicker
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import com.adizdaroglu.camerapicker.databinding.ActivityMainBinding
+
+const val IMAGE_BITMAP_KEY= "IMAGE_BITMAP"
+const val FIRST_NAME_KEY= "FIRST_NAME"
+const val EMAIL_KEY= "EMAIL"
+const val PASSWORD_KEY= "PASSWORD"
+const val WEBSITE_KEY= "WEBSITE"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var activityBinding: ActivityMainBinding
@@ -58,7 +65,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (hasEmptyField.not() && activityBinding.imageviewAvatar.drawable != null) {
-            // success
+            val intent = Intent(this, ConfirmationActivity::class.java)
+
+            val imageDrawable = activityBinding.imageviewAvatar.drawable
+            val bitmap = (imageDrawable as BitmapDrawable).bitmap
+            intent.putExtra(IMAGE_BITMAP_KEY, bitmap)
+
+            intent.putExtra(FIRST_NAME_KEY, activityBinding.firstNameEditText.text.toString())
+            intent.putExtra(EMAIL_KEY, activityBinding.emailEditText.text.toString())
+            intent.putExtra(PASSWORD_KEY, activityBinding.passwordEditText.text.toString())
+            intent.putExtra(WEBSITE_KEY, activityBinding.websiteEditText.text.toString())
+
+            startActivity(intent)
         }
     }
 

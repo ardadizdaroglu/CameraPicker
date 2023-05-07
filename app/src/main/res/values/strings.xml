@@ -8,4 +8,7 @@
     <string name="password_edittext_register_page">Password</string>
     <string name="website_edittext_register_page">Website</string>
     <string name="submit_button_register_page">Submit</string>
+
+    <string name="subtitle_confirmation_page">Your super-awesome portfolio has been successfully submitted! The preview below is what the community will see!</string>
+    <string name="sign_in_button_register_page">Sign In</string>
 </resources>
