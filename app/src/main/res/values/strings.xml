@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Camera Picker</string>
+    <string name="title_register_page">Profile Creation</string>
+    <string name="subtitle_register_page">Use the form below to submit your portfolio. An email and password are required.</string>
+    <string name="text_avatar_register_page">Tap to add avatar</string>
+    <string name="firstname_edittext_register_page">First Name</string>
+    <string name="email_edittext_register_page">Email Address</string>
+    <string name="password_edittext_register_page">Password</string>
+    <string name="website_edittext_register_page">Website</string>
+    <string name="submit_button_register_page">Submit</string>
 </resources>

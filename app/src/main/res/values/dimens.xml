@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="left_right_margin_scrollview_register_page">20dp</dimen>
+    <dimen name="left_right_margin_button_register_page">12dp</dimen>
+    <dimen name="bottom_margin_button_register_page">20dp</dimen>
+    <dimen name="padding_edittext_register_page">15dp</dimen>
+    <dimen name="button_radius">10dp</dimen>
+    <dimen name="edittext_radius">10dp</dimen>
+    <dimen name="edittext_border_thickness">2dp</dimen>
+    <dimen name="avatar_radius">10dp</dimen>
+    <dimen name="avatar_width">130dp</dimen>
+    <dimen name="avatar_height">200dp</dimen>
+    <dimen name="margin_big">24dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+</resources>
